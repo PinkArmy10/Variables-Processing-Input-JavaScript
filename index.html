@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bills</title>
+</head>
+
+<body>
+    <p id = "messages"></p>
+    
+</body>
+<script>
+    let pararef = document.querySelector("#messages");
+    console.log("debug 1");
+    pararef.textContent = "Calculate your bill.";
+    console.log("debug 2");
+
+
+    let bill = prompt("Please enter your bill amount: $");
+/*     let numbersecond = prompt("Please enter second num"); */
+    let taxed = bill * 1.07;
+    let tip = taxed * .15;
+    taxedInt = parseInt(taxed);
+    tipInt = parseInt(tip);
+    let total = taxedInt + tipInt;
+
+
+    let displaystr = `Your bill is: ${bill}, Your taxed bill is: ${taxed}, your Tip is: ${tip}, Your Final bill is: ${total}`;
+
+    console.log(displaystr);
+    alert(displaystr)
+
+    </script>
+</html>
